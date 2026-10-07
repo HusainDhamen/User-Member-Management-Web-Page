@@ -18,7 +18,7 @@
 ## Team Responsibilities
 
 ### HTML
-Member:
+Member: Husain
 - Create storefront homepage
 - Create separate sign-up page
 - Create navigation between pages
@@ -31,7 +31,7 @@ Member:
 - Create table or cards area for displaying users
 
 ### CSS / Bootstrap
-Member:
+Member: Ali
 - Style homepage
 - Style sign-up page
 - Use Bootstrap components
@@ -39,7 +39,7 @@ Member:
 - Keep styling consistent between pages
 
 ### JavaScript
-Member:
+Members: Gianny, Mahmoud
 - Form submission
 - Validate required user inputs
 - Dynamically display submitted users/members
@@ -47,7 +47,7 @@ Member:
 - Delete functionality (optional)
 
 ### JSON
-Member:
+Member: Nisha
 - Store user/member information in JSON format
 - Use the same fields as the sign-up form
 - Make sure user data can be displayed in JSON format
