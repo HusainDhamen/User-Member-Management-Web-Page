@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join Bridges</title>
+
+    <!-- Bootstrap -->
+    <link href ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ali our css file-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Top navigation -->
+    <!-- Ali CSS: Style the navigation to match the homepage -->
+    <header id="signupHeader">
+
+        <h2>Bridges</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+
+    </header>
+
+    <!-- Main signup page -->
+    <main id="signupPage">
+
+        <!-- Ali CSS: center and style the signup form -->
+        <section id="signupBox">
+
+            <h1>Join Bridges</h1>
+
+            <p>
+                Join the IST community and connect with other students.
+            </p>
+
+            <!-- 
+
+                Gianny and mahmoud JS:
+                Validate the user information when the form is submitted.
+
+                Nisha JSON:
+                Keep the JSON field names the same as the form below.
+            -->
+            <form id="signupForm">
+
+                <!-- Full Name-->
+                <div>
+                    
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Age -->
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+
+                <!-- Address -->
+                <div>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <!-- Phone number is optional -->
+                <div>
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <!-- Gianny and mahmoud JS: validate form when submitted -->
+                <button type="submit">Join Bridges</button>
+
+            </form>
+
+
+
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+
+
+</body>
