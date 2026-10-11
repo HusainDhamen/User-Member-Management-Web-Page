@@ -55,7 +55,7 @@ body {
 
 #headerBar {
     height: 65px;
-    border-bottom: 1px solid #334155; 
+    border-bottom: 1px solid #334155;
     display: flex;
     justify-content: flex-end;
     align-items: center;
