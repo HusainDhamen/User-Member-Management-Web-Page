@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background-color: #0b0f14
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    position: fixed;
+    width: 220px;
+    height: 100%;
+    background-color: #161b22
+    padding: 20px;
+}
+
+#sidebar h2 {
+    font-size: 26px;
+}
+
+#sideBarbutton {
+    background-color: #252b33
+    color: white;
+    border: 1px solid #3a414b;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+}
+
+#sidebar nav a {
+    display: block;
+    color: #c5cbd3
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#sidebar nav a:hover {
+    background-color: #252b33
+    color: white;
+}
+
+#mainPage {
+    margin-left: 260px;
+}
+
+#headerBar {
+    height: 65px;
+    border-bottom: 1px solid #2c333d 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding right: 30px;
+}
+
+#headerBar a {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+
+}
+
+#mainIntro {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    min-height: 350px;
+    border-bottom; 1px solid #2c333d;
+
+}
+
+#mainPageText {
+    width: 50%;
+}
+
+#mainPageText h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
