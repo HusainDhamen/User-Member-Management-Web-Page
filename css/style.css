@@ -1,16 +1,17 @@
 body {
     margin: 0;
-    background-color: #0b0f14
+    background-color: #0b0f14;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 #sidebar {
     position: fixed;
     width: 220px;
     height: 100%;
-    background-color: #161b22
+    background-color: #151a20;
     padding: 20px;
+    border-right: 1px solid #2f3740;
 }
 
 #sidebar h2 {
@@ -18,23 +19,32 @@ body {
 }
 
 #sideBarbutton {
-    background-color: #252b33
-    color: white;
-    border: 1px solid #3a414b;
+    background-color: #151a20;
+    color: #c5cbd3;
+    border: 1px solid #2f3740;
     padding: 8px 12px;
     margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+#sidebar nav {
+    margin-top: 25px;
+    border-top: 1px solid #2f3740;
+    padding-top: 20px;
 }
 
 #sidebar nav a {
     display: block;
-    color: #c5cbd3
+    color: #c5cbd3;
     text-decoration: none;
-    padding: 10px;
-    margin-bottom: 5px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    background-color: #1d232b;
+    border-radius: 5px;
 }
 
 #sidebar nav a:hover {
-    background-color: #252b33
+    background-color: #252d36;
     color: white;
 }
 
@@ -44,11 +54,12 @@ body {
 
 #headerBar {
     height: 65px;
-    border-bottom: 1px solid #2c333d 
+    border-bottom: 1px solid #444; 
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding right: 30px;
+    padding right: 15px;
+    background-color: #0b0f14;
 }
 
 #headerBar a {
@@ -57,6 +68,7 @@ body {
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
+    margin-right: 30px;
 
 }
 
@@ -78,3 +90,194 @@ body {
     margin-bottom: 10px;
 }
 
+#mainPageText h1 {
+    color: #60a5fa;
+    font-size: 27px;
+}
+
+#mainPageText p {
+    color: #b4bbc4;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+#mainPageText a {
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+#imageHome {
+    width: 50%;
+    margin-left: 30px;
+}
+
+#imageHome img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+#feed {
+    padding: 40px 50px;
+}
+
+#feed h2 {
+    margin-bottom: 20px;
+}
+
+#postsList > div {
+    background-color: #161b22;
+    border: 1px solid #2c333d;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#postsList h3 {
+    color: white;
+}
+
+#postsList p {
+    color: #b4bbc4;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #2c333d;
+    padding: 20px;
+    color: #9ca3af;
+}
+
+#signupHeader {
+    background-color: #161b22;
+    border-bottom: 1px solid #2c333d;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#signupHeader h2 {
+    margin: 0;
+}
+
+#signupHeader nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#signupPage {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+}
+
+#signupBox {
+    width: 50%;
+    background-color: #161b22;
+    border: 1px solid #2c333d;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#signupBox h1 {
+    margin-top: 0;
+}
+
+#signupBox p {
+    color: #b4bbc4;
+}
+
+#signupForm div {
+    margin-bottom: 15px;
+}
+
+#signupForm  label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#signupForm input {
+    width: 100%;
+    padding: 10px;
+    background-color: #0b0f14
+    color: white;
+    border: 1px solid #3a414b;
+    border-radius: 4px;
+}
+
+#signupForm button {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 5px;
+}
+
+#members {
+    width: 50%;
+    background-color: #161b22;
+    border: 1px solid #2c333d;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#members h2 {
+    margin-top: 0;
+}
+
+#membersList > div {
+    background-color: #0b0f14;
+    border: 1px solid #2c333d;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 700px) {
+
+    #sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    #mainPage {
+        margin-left: 0;
+    }
+
+    #mainIntro {
+        display: block;
+        padding: 30px;
+    }
+
+    #mainPageText {
+        width: 100%;
+    }
+
+    #imageHome {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    #signupPage {
+        display: block;
+    }
+
+    #signupBox {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+ 
+    #members {
+        width: 100%;
+    }
+
+
+}
