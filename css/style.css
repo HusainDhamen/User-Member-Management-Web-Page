@@ -19,7 +19,7 @@ body {
     font-size: 26px;
 }
 
-#sideBarbutton {
+#sideBarButton {
     background-color: #273449;
     color: white;
     border: 1px solid #475569;
@@ -60,7 +60,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding right: 35px;
+    padding-right: 35px;
     background-color: #0f172a;
 }
 
@@ -79,7 +79,7 @@ body {
     align-items: center;
     padding: 50px;
     min-height: 350px;
-    border-bottom; 1px solid #334155;
+    border-bottom: 1px solid #334155;
 
 }
 
@@ -92,7 +92,7 @@ body {
     margin-bottom: 10px;
 }
 
-#mainPageText h1 {
+#mainPageText h2 {
     color: #60a5fa;
     font-size: 27px;
 }
