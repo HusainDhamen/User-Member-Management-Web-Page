@@ -1,4 +1,3 @@
-// JavaScript - Gianny and Mahmoud
 
 // Sidebar
 const sideBarButton = document.getElementById("sideBarButton");
@@ -272,7 +271,7 @@ function deleteMember(index) {
 }
 
 function resetForm() {
-    
+
   form.reset();
   clearErrors();
   editIndex = -1;
