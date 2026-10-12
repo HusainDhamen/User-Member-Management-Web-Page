@@ -1,0 +1,18 @@
+[ 
+    {
+    "fullName": "Mahmoud Mandani",
+    "email": "mahmoud.mandani@example.com", 
+    "age": 67 , 
+    "address": "123 Arab City, Kuwait", 
+    "phone" : 9876543210
+
+}
+    {
+    "fullName": "Triple T",
+    "email": " ttt@icloud.com", 
+    "age": 3 , 
+    "address": " 545 Street, New York, USA", 
+    "phone" : ""
+
+}
+]
