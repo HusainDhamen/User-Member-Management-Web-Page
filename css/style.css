@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #0f172a;
+    background-color: #2b211d;
     color: white;
     font-family: "Trebuchet MS", Arial, sans-serif;
     
@@ -10,9 +10,9 @@ body {
     position: fixed;
     width: 220px;
     height: 100%;
-    background-color: #1e293b;
+    background-color: #3a2c25;
     padding: 20px;
-    border-right: 1px solid #334155;
+    border-right: 1px solid #6d574a;
 }
 
 #sidebar h2 {
@@ -20,9 +20,9 @@ body {
 }
 
 #sideBarButton {
-    background-color: #273449;
+    background-color: #46362e;
     color: white;
-    border: 1px solid #475569;
+    border: 1px solid #6d574a;
     padding: 8px 12px;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -30,42 +30,42 @@ body {
 
 #sidebar nav {
     margin-top: 25px;
-    border-top: 1px solid #334155;
+    border-top: 1px solid #6d574a;
     padding-top: 20px;
 }
 
 #sidebar nav a {
     display: block;
-    color: #cbd5e1;
+    color: #f0d7bd;
     text-decoration: none;
     padding: 12px 14px;
     margin-bottom: 8px;
-    background-color: #273449;
+    background-color: #46362e;
     border-radius: 5px;
 }
 
 #sidebar nav a:hover {
-    background-color: #334155;
+    background-color: #5a463b;
     color: white;
 }
 
 #mainPage {
     margin-left: 260px;
-    background-color: #0f172a;
+    background-color: #2b211d;
 }
 
 #headerBar {
     height: 65px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #6d574a;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 35px;
-    background-color: #0f172a;
+    background-color: #2b211d;
 }
 
 #headerBar a {
-    background-color: #3b82f6;
+    background-color: #d7b08a;
     color: white;
     text-decoration: none;
     padding: 8px 15px;
@@ -79,7 +79,7 @@ body {
     align-items: center;
     padding: 50px;
     min-height: 350px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #6d574a;
 
 }
 
@@ -105,7 +105,7 @@ body {
 }
 
 #mainPageText a {
-    background-color: #3b82f6;
+    background-color: #d7b08a;
     color: white;
     text-decoration: none;
     padding: 10px 18px;
@@ -131,31 +131,31 @@ body {
 }
 
 #postsList > div {
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #3a2c25;
+    border: 1px solid #6d574a;
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
 #postsList h3 {
-    color: white;
+    color: #fff7ef;
 }
 
 #postsList p {
-    color: #b4bbc4;
+    color: #d8c5b5;
 }
 
 footer {
     text-align: center;
-    border-top: 1px solid #334155;
+    border-top: 1px solid #6d574a;
     padding: 20px;
     color: #9ca3af;
 }
 
 #signupHeader {
-    background-color: #1e293b;
-    border-bottom: 1px solid #334155;
+    background-color: #3a2c25;
+    border-bottom: 1px solid #6d574a;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
@@ -181,8 +181,8 @@ footer {
 
 #signupBox {
     width: 50%;
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #3a2c25;
+    border: 1px solid #6d574a;
     padding: 30px;
     border-radius: 6px;
 }
@@ -192,7 +192,7 @@ footer {
 }
 
 #signupBox p {
-    color: #b4bbc4;
+    color: #d8c5b5;
 }
 
 #signupForm div {
@@ -207,15 +207,15 @@ footer {
 #signupForm input {
     width: 100%;
     padding: 10px;
-    background-color: #273449;
+    background-color: #5a463b;
     color: white;
-    border: 1px solid #475569;
+    border: 1px solid #7a6354;
     border-radius: 4px;
 }
 
 #signupForm button {
     width: 100%;
-    background-color: #3b82f6;
+    background-color: #d7b08a;
     color: white;
     border: none;
     padding: 11px;
@@ -224,8 +224,8 @@ footer {
 
 #members {
     width: 50%;
-    background-color: #1e293b;
-    border: 1px solid #334155;
+    background-color: #3a2c25;
+    border: 1px solid #6d574a;
     padding: 30px;
     border-radius: 6px;
 }
@@ -235,8 +235,8 @@ footer {
 }
 
 #membersList > div {
-    background-color: #0b0f14;
-    border: 1px solid #2c333d;
+    background-color: #46362e;
+    border: 1px solid #6d574a;
     padding: 15px;
     margin-bottom: 10px;
 }
