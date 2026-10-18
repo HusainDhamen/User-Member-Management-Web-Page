@@ -1,28 +1,28 @@
 body {
     margin: 0;
-    background-color: #2b211d;
-    color: white;
+    background-color: #f3eee8;
+    color: #2f2925;
     font-family: "Trebuchet MS", Arial, sans-serif;
-    
 }
 
 #sidebar {
     position: fixed;
     width: 220px;
     height: 100%;
-    background-color: #3a2c25;
+    background-color: #e7ddd3;
     padding: 20px;
-    border-right: 1px solid #6d574a;
+    border-right: 1px solid #cbbcaf;
 }
 
 #sidebar h2 {
     font-size: 26px;
+    color: #2f2925;
 }
 
 #sideBarButton {
-    background-color: #46362e;
-    color: white;
-    border: 1px solid #6d574a;
+    background-color: #d8ccc1;
+    color: #4a3a30;
+    border: 1px solid #bfae9f;
     padding: 8px 12px;
     margin-bottom: 15px;
     border-radius: 4px;
@@ -30,48 +30,47 @@ body {
 
 #sidebar nav {
     margin-top: 25px;
-    border-top: 1px solid #6d574a;
+    border-top: 1px solid #cbbcaf;
     padding-top: 20px;
 }
 
 #sidebar nav a {
     display: block;
-    color: #f0d7bd;
+    color: #4a3a30;
     text-decoration: none;
     padding: 12px 14px;
     margin-bottom: 8px;
-    background-color: #46362e;
+    background-color: #eee6de;
     border-radius: 5px;
 }
 
 #sidebar nav a:hover {
-    background-color: #5a463b;
-    color: white;
+    background-color: #ddd1c6;
+    color: #2f2925;
 }
 
 #mainPage {
     margin-left: 260px;
-    background-color: #2b211d;
+    background-color: #f3eee8;
 }
 
 #headerBar {
     height: 65px;
-    border-bottom: 1px solid #6d574a;
+    border-bottom: 1px solid #cbbcaf;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 35px;
-    background-color: #2b211d;
+    background-color: #f3eee8;
 }
 
 #headerBar a {
-    background-color: #d7b08a;
+    background-color: #8b6f5a;
     color: white;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
     margin-right: 30px;
-
 }
 
 #mainIntro {
@@ -79,8 +78,7 @@ body {
     align-items: center;
     padding: 50px;
     min-height: 350px;
-    border-bottom: 1px solid #6d574a;
-
+    border-bottom: 1px solid #cbbcaf;
 }
 
 #mainPageText {
@@ -90,22 +88,23 @@ body {
 #mainPageText h1 {
     font-size: 45px;
     margin-bottom: 10px;
+    color: #4a3a30;
 }
 
 #mainPageText h2 {
-    color: #60a5fa;
+    color: #8b6f5a;
     font-size: 27px;
 }
 
 #mainPageText p {
-    color: #cbd5e1;
+    color: #75685f;
     font-size: 17px;
     line-height: 1.5;
     margin-bottom: 25px;
 }
 
 #mainPageText a {
-    background-color: #d7b08a;
+    background-color: #8b6f5a;
     color: white;
     text-decoration: none;
     padding: 10px 18px;
@@ -128,34 +127,35 @@ body {
 
 #feed h2 {
     margin-bottom: 20px;
+    color: #2f2925;
 }
 
 #postsList > div {
-    background-color: #3a2c25;
-    border: 1px solid #6d574a;
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
     padding: 20px;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
 #postsList h3 {
-    color: #fff7ef;
+    color: #2f2925;
 }
 
 #postsList p {
-    color: #d8c5b5;
+    color: #75685f;
 }
 
 footer {
     text-align: center;
-    border-top: 1px solid #6d574a;
+    border-top: 1px solid #cbbcaf;
     padding: 20px;
-    color: #9ca3af;
+    color: #75685f;
 }
 
 #signupHeader {
-    background-color: #3a2c25;
-    border-bottom: 1px solid #6d574a;
+    background-color: #e7ddd3;
+    border-bottom: 1px solid #cbbcaf;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
@@ -164,11 +164,23 @@ footer {
 
 #signupHeader h2 {
     margin: 0;
+    color: #2f2925;
+}
+
+#signupHeader nav {
+    display: flex;
+    align-items: center;
 }
 
 #signupHeader nav a {
-    color: white;
+    color: #4a3a30;
     text-decoration: none;
+}
+
+#signupHeader nav span {
+    color: #4a3a30;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #signupPage {
@@ -181,41 +193,43 @@ footer {
 
 #signupBox {
     width: 50%;
-    background-color: #3a2c25;
-    border: 1px solid #6d574a;
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
     padding: 30px;
     border-radius: 6px;
 }
 
 #signupBox h1 {
     margin-top: 0;
+    color: #2f2925;
 }
 
 #signupBox p {
-    color: #d8c5b5;
+    color: #75685f;
 }
 
 #signupForm div {
     margin-bottom: 15px;
 }
 
-#signupForm  label {
+#signupForm label {
     display: block;
     margin-bottom: 5px;
+    color: #4a3a30;
 }
 
 #signupForm input {
     width: 100%;
     padding: 10px;
-    background-color: #5a463b;
-    color: white;
-    border: 1px solid #7a6354;
+    background-color: #f7f3ef;
+    color: #2f2925;
+    border: 1px solid #bfae9f;
     border-radius: 4px;
 }
 
 #signupForm button {
     width: 100%;
-    background-color: #d7b08a;
+    background-color: #8b6f5a;
     color: white;
     border: none;
     padding: 11px;
@@ -224,19 +238,20 @@ footer {
 
 #members {
     width: 50%;
-    background-color: #3a2c25;
-    border: 1px solid #6d574a;
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
     padding: 30px;
     border-radius: 6px;
 }
 
 #members h2 {
     margin-top: 0;
+    color: #2f2925;
 }
 
 #membersList > div {
-    background-color: #46362e;
-    border: 1px solid #6d574a;
+    background-color: #f7f3ef;
+    border: 1px solid #cbbcaf;
     padding: 15px;
     margin-bottom: 10px;
 }
@@ -276,10 +291,8 @@ footer {
         width: 100%;
         margin-bottom: 25px;
     }
- 
+
     #members {
         width: 100%;
     }
-
-
 }
