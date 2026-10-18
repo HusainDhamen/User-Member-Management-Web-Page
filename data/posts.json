@@ -1,0 +1,29 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "description": "This is the first post. Welcome to Bridges!",
+            "category": "Community",
+            "unitOfMeasure": "Post",
+            "price": 0, 
+            "additonalInfo": "Say hello and tell us what you are looking for in the community."
+        }, 
+
+        { 
+            "id": 2, 
+            "description": "Study Group for IST", 
+            "category": "Study Group",
+            "unitOfMeasure": "Post",
+            "price": 0,
+            "additonalInfo": "Looking for members to join our study group for IST courses."
+        }, 
+        {
+            "id": 3,
+            "description": "IST Internship Info Session",
+            "category": "Career Advice",
+            "unitOfMeasure": "Post",
+            "price": 0,
+            "additonalInfo": "Share what resources you'd like us to provide you for internship opportunities and career advice."
+        } 
+    ]
+}
