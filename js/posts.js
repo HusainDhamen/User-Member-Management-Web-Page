@@ -76,3 +76,42 @@ postsForm.addEventListener("submit", function (event) {
 
   postsForm.reset();
 });
+
+
+$("#searchButton").click(function () {
+
+    let searchText = $("#searchPost").val().toLowerCase();
+
+    $("#allPosts").empty();
+
+    let found = false;
+
+    for (let i = 0; i < posts.length; i++) {
+
+        let post = posts[i];
+
+        if (String(post.id).includes(searchText) ||
+            post.title.toLowerCase().includes(searchText) ||
+            post.category.toLowerCase().includes(searchText)) {
+
+            $("#allPosts").append(
+                "<div class='card mb-3'>" +
+                "<div class='card-body'>" +
+                "<h5 class='card-title'>" + post.title + "</h5>" +
+                "<p>ID: " + post.id + "</p>" +
+                "<p>Category: " + post.category + "</p>" +
+                "<p>Format: " + post.format + "</p>" +
+                "<p>Importance: " + post.value + "</p>" +
+                "<p>Description: " + post.description + "</p>" +
+                "</div></div>"
+            );
+
+            found = true;
+        }
+    }
+
+    if (found === false) {
+        $("#allPosts").text("No posts found.");
+    }
+
+});
