@@ -296,3 +296,184 @@ footer {
         width: 100%;
     }
 }
+
+#postsHeader {
+    background-color: #e7ddd3;
+    border-bottom: 1px solid #cbbcaf;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#postsHeader h2 {
+    margin: 0;
+    color: #2f2925;
+}
+
+#postsHeader nav {
+    display: flex;
+    gap: 20px;
+}
+
+#postsHeader nav a {
+    color: #4a3a30;
+    text-decoration: none;
+}
+
+/* main manage post page */
+
+#postsPage {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+#postsIntro {
+    margin-bottom: 30px;
+}
+
+#postsIntro h1 {
+    color: #2f2925;
+    margin-bottom: 10px;
+}
+
+#postsIntro p {
+    color: #75685f;
+}
+
+#postsFormBox {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+#postsFormBox h2 {
+    color: #2f2935;
+    margin-bottom: 25px;
+}
+
+#postsForm div {
+    margin-bottom: 15px;
+}
+
+#postsForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a3a30;
+}
+
+#postsForm input,
+#postsForm select,
+#postsForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7f3ef;
+    color: #2f2925;
+    border: 1px solid #bfae9f;
+    border-radius: 4px;
+}
+
+#postsForm textarea {
+    height: 100px;
+}
+
+#postsForm button {
+    background-color: #8b6f5a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+#postsMessage {
+    margin-top: 15px;
+    color: #75685f;
+}
+
+#postsSearch {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+#postsSearch h2 {
+    color: #2f2935;
+    margin-bottom: 15px;
+
+}
+
+#searchPost {
+    width: 75%;
+    padding: 10px;
+    background-color: #f7f3ef;
+    color: #2f2925;
+    border: 1px solid #bfae9f;
+    border-radius: 4px;
+}
+
+searchButton {
+    background-color: #8b6f5a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#postsDisplay {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#postsDisplay h2 {
+    color: #2f2925;
+    margin-bottom: 20px;
+}
+
+#allPosts > div {
+    background-color: #f7f3ef;
+    border: 1px solid #cbbcaf;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+#allPosts h3 {
+     color: #2f2925;
+}
+
+#allPosts p {
+    color: #75685f;
+}
+
+@media (max-width: 700px) {
+
+    #postsHeader {
+        padding: 20px;
+    }
+    #postsHeader nav {
+        gap: 10px;
+    }
+
+    #postsPage {
+        width: 95%;
+    }
+
+    searchPost {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #searchButton {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
