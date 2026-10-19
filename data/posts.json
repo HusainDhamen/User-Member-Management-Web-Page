@@ -1,10 +1,11 @@
-{
-    "posts": [
+[
+    
+    
         {
             "id": 1,
             "title": "This is the first post. Welcome to Bridges!",
             "category": "Community",
-            "format": "Post",
+            "format": "Announcement",
             "value": 5, 
             "description": "Say hello and tell us what you are looking for in the community."
         }, 
@@ -20,10 +21,11 @@
         {
             "id": 3,
             "title": "IST Internship Info Session",
-            "category": "Career Advice",
-            "format": "Career",
+            "category": "Career",
+            "format": "Announcement",
             "value": 4,
             "description": "Resources you'd like for internship opportunities and career advice."
         } 
-    ]
-}
+    
+    
+]

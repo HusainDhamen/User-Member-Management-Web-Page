@@ -1,5 +1,12 @@
 let posts = [];
 
+$.getJSON("data/posts.json", function(data) 
+{
+  posts = data;
+});
+
+
+
 let postsForm = document.getElementById("postsForm");
 let postMessage = document.getElementById("postMessage");
 
