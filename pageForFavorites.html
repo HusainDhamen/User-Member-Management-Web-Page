@@ -16,8 +16,90 @@
         <!-- Gianny: Use the jQuery for searching and AJAX -->
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
-        
+
     </head>
+
+    <body>
+
+        <!-- Ill handle navigation between the pages -->
+
+        <header id="favoritesHeader">
+            <h2>Bridges</h2>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="signupPage.html">Join Bridges</a>
+                <a href="pageForPosts.html">Manage Posts</a>
+                <a href="pageForFavorites.html">My Favorites</a>
+                
+            </nav>
+        </header>
+
+
+        <main id="pageForFavorites" class ="container my-4">
+
+
+            <!-- Ali: Style the introduction section -->
+             <section id="favoritesIntro">
+
+                <h1>My Favorite Resources</h1>
+                <p>Save and manage your resources</p>
+             </section>
+
+
+             <!-- Gianny: Use jQuery to search available resources -->
+              <section id="resourceSearch" class="my-4">
+
+                <h2>Find Resources</h2>
+
+
+
+                <input type ="text" id="searchResource" placeholder="Search by title or category">
+
+                <button type="button" id ="searchResourceButton">
+                    Search
+                </button>
+
+
+                <!-- Gianny: Display matching resources here -->
+                <!-- Mahmoud: Add an add to favorites button to each resource -->
+                 <div id="resourceResults">
+
+                 </div>
+              </section>
+
+              <!-- Mahmoud: Validate the saved resource form -->
+               <section id ="favoriteFormBox" class ="my-4">
+                <h2>Edit Favorite</h2>
+
+                <form id ="favoriteForm">
+
+
+                    <div>
+                        <label for="favoriteId">Resource ID</label>
+                        <input type ="number" id="favoriteId" required>
+
+                    </div>
+
+                    <div>
+
+                        <label for="favoriteNotes">Personal Notes</label>
+                        <textarea id="favoriteNotes"></textarea>
+                    </div>
+
+
+                    
+                </form>
+               </section>
+
+
+
+
+        </main>
+
+
+        
+    </body>
 
 
 
