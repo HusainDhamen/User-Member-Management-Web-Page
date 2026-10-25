@@ -1,31 +1,34 @@
-[
-    
-    
+{
+    "posts": [
         {
             "id": 1,
-            "title": "This is the first post. Welcome to Bridges!",
+            "title": "Welcome to Bridges!",
             "category": "Community",
             "format": "Announcement",
-            "value": 5, 
+            "value": 5,
+            "unitOfMeasure": "post",
+            "price": 0.00,
             "description": "Say hello and tell us what you are looking for in the community."
-        }, 
-
-        { 
-            "id": 2, 
-            "title": "Study Group for IST", 
+        },
+        {
+            "id": 2,
+            "title": "Study Group for IST",
             "category": "Study",
             "format": "Discussion",
             "value": 3,
+            "unitOfMeasure": "session",
+            "price": 0.00,
             "description": "Looking for members to join our study group for IST courses."
-        }, 
+        },
         {
             "id": 3,
             "title": "IST Internship Info Session",
             "category": "Career",
-            "format": "Announcement",
+            "format": "Article",
             "value": 4,
-            "description": "Resources you'd like for internship opportunities and career advice."
-        } 
-    
-    
-]
+            "unitOfMeasure": "event",
+            "price": 5.00,
+            "description": "Resources for internship opportunities and career advice."
+        }
+    ]
+}

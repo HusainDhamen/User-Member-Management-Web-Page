@@ -1,0 +1,10 @@
+{
+    "cart": [],
+    "total": 0.00
+}
+{
+    "cart": [
+        { "id": 2, "title": "Study Group for IST", "price": 0.00, "quantity": 1 }
+    ],
+    "total": 0.0
+}
