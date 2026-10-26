@@ -3,6 +3,7 @@ let posts = [];
 $.getJSON("data/posts.json", function(data) 
 {
   posts = data;
+  showPosts(posts);
 });
 
 
@@ -81,44 +82,64 @@ postsForm.addEventListener("submit", function (event) {
 
   console.log(JSON.stringify({ posts: posts }, null, 2));
 
+  showPosts(posts);
   postsForm.reset();
 });
 
 
-$("#searchButton").click(function () {
 
-    let searchText = $("#searchPost").val().toLowerCase();
-
+function showPosts(list) {
     $("#allPosts").empty();
 
-    let found = false;
-
-    for (let i = 0; i < posts.length; i++) {
-
-        let post = posts[i];
-
-        if (String(post.id).includes(searchText) ||
-            post.title.toLowerCase().includes(searchText) ||
-            post.category.toLowerCase().includes(searchText)) {
-
-            $("#allPosts").append(
-                "<div class='card mb-3'>" +
-                "<div class='card-body'>" +
-                "<h5 class='card-title'>" + post.title + "</h5>" +
-                "<p>ID: " + post.id + "</p>" +
-                "<p>Category: " + post.category + "</p>" +
-                "<p>Format: " + post.format + "</p>" +
-                "<p>Importance: " + post.value + "</p>" +
-                "<p>Description: " + post.description + "</p>" +
-                "</div></div>"
-            );
-
-            found = true;
-        }
-    }
-
-    if (found === false) {
+    if (list.length === 0) {
         $("#allPosts").text("No posts found.");
+        return;
     }
 
+    $.each(list, function (i, p) {
+        let card = $("<div>").addClass("card mb-3");
+        let body = $("<div>").addClass("card-body");
+
+        body.append($("<h5>").addClass("card-title").text(p.title));
+        body.append($("<p>").text("ID: " + p.id + " | Category: " + p.category + " | Format: " + p.format + " | Importance: " + p.value));
+        body.append($("<p>").text("Description: " + p.description));
+        body.append($("<button>").addClass("btn btn-sm btn-outline-primary edit me-2").data("id", p.id).text("Edit"));
+        body.append($("<button>").addClass("btn btn-sm btn-outline-danger delete").data("id", p.id).text("Delete"));
+
+        card.append(body);
+        $("#allPosts").append(card);
+    });
+}
+
+function searchPosts() {
+    let text = $("#searchPost").val().toLowerCase();
+
+    let results = $.grep(posts, function (p) {
+        return String(p.id).includes(text) ||
+               p.title.toLowerCase().includes(text) ||
+               p.category.toLowerCase().includes(text);
+    });
+
+    showPosts(results);
+}
+
+$("#searchButton").click(searchPosts);
+$("#searchPost").on("keyup", searchPosts);
+
+$("#allPosts").on("click", ".edit", function () {
+    let id = $(this).data("id");
+    let p = $.grep(posts, function (x) { return x.id === id; })[0];
+
+    $("#postId").val(p.id);
+    $("#postTitle").val(p.title);
+    $("#postCategory").val(p.category);
+    $("#postFormat").val(p.format);
+    $("#postValue").val(p.value);
+    $("#postDescription").val(p.description);
+});
+
+$("#allPosts").on("click", ".delete", function () {
+    let id = $(this).data("id");
+    posts = $.grep(posts, function (x) { return x.id !== id; });
+    searchPosts();
 });

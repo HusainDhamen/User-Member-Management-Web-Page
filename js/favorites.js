@@ -120,3 +120,21 @@ function removeFavorite(id) {
 showFavorites();
 
 // Gianny: Prepare AJAX requests for the future REST API
+$("#sendFavorites").click(function () {
+
+    $.ajax({
+        url: "/api/favorites",              // future RESTful API endpoint
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({ favorites: favorites }),
+
+        success: function (response) {
+            $("#ajaxMessage").text("Favorites sent to the server!").css("color", "green");
+        },
+
+        error: function () {
+            $("#ajaxMessage").text("API not available yet. The backend will be built in a later assignment.").css("color", "red");
+        }
+    });
+
+});
