@@ -1,5 +1,5 @@
-{
-    "posts": [
+
+    [
         {
             "id": 1,
             "title": "Welcome to Bridges!",
@@ -31,4 +31,3 @@
             "description": "Resources for internship opportunities and career advice."
         }
     ]
-}
