@@ -9,6 +9,11 @@
 // Mahmoud: Add resources to favorites
 let favorites = [];
 
+$.getJSON("data/favorites.json", function(data){
+    favorites = data;
+    showFavorites();
+});
+
 function favoriteButton(resource) {
     return `<button type="button" data-id="${resource.id}" data-title="${resource.title}" data-category="${resource.category}" onclick="addFavorite(this)">Add to Favorites</button>`;
 }
@@ -111,6 +116,7 @@ function removeFavorite(id) {
     for (let i = 0; i < favorites.length; i++) {
         if (favorites[i].id === id) {
             favorites.splice(i, 1);
+            break;
         }
     }
 
