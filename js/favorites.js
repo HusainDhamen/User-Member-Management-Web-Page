@@ -3,8 +3,42 @@
 // Nisha: Data comes from posts.json and favorites.json
 
 // Gianny: Load resources using jQuery
+let resources = [];
+$.getJSON("data/posts.json", function(data){
+    resources = data;
+});
 
 // Gianny: Search resources using jQuery
+$("#searchResourceButton").click(function () {
+    let search = $("#searchResource").val().toLowerCase().trim();
+    let html = "";
+
+    for (let i = 0; i < resources.length; i++) {
+        let resource = resources[i];
+
+        if (
+            resource.title.toLowerCase().includes(search) || 
+            resource.category.toLowerCase().includes(search)
+            || String(resource.id) === search 
+            
+        ) {
+            html += `
+                <div class="resourceItem">
+                    <h3>${resource.title}</h3>
+                    <p>Category: ${resource.category}</p>
+                    ${favoriteButton(resource)}
+                </div>
+            `;
+        }
+
+    }
+    
+    if (html === "") {
+        html = "<p>No resources found.</p>";
+    }
+    
+    $("#resourceResults").html(html);
+});
 
 // Mahmoud: Add resources to favorites
 let favorites = [];
