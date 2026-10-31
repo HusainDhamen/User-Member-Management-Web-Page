@@ -39,9 +39,128 @@
 
      </header>
 
-     
+     <main id="pageForPreferences" class= "container my-4">
+
+        <!-- Intro-->
+         <section id ="preferencesIntro">
+            <h1>Resource Preferences</h1>
+
+            <p>Choose your resource and confirm your preferences.</p>
+         </section>
+
+         <!-- ill handle preferences form -Husain-->
+          <section id ="preferencesFormBox" class="my-4">
+
+            <h2>Confirm Your Preferences</h2>
+
+            <form id ="preferencesForm" ng-submit ="submitPreferences()">
+
+                <!-- Student info-->
+                 <div class="md-3">
+                    <label for="studentName">Full Name</label>
+
+                    <input type ="text" id ="studentName" 
+                    class="form-control" 
+                    ng-model ="preferences.name" required>
+                        
+
+
+                 </div>
+
+                 <div class ="mb-3">
+                    <label for= "studentEmail">Email</label>
+                    <input type = "email" id ="studentEmail"
+                    class="form-control"
+                    ng-model ="preferences.email" required>
+
+
+                 </div>
+
+                 <!-- selection for resource-->
+
+                 <div class ="mb-3">
+
+                    <label for= "selectedResource">Select Resource</label>
+
+                    <select id ="selectedResource"
+                            class ="form-select"
+                            ng-model = "preferences.resource" required>
+
+                        <option value="">Choose a resource</option>
+
+
+                        <option value="Study Group for IST">
+                            Study Group for IST
+                        </option>
+
+                        <option value="IST Internship Info Session">
+                            IST Internship Info Session
+                        </option>
+
+                        <option value="Welcome to Bridges">
+                            Welcome to Bridges
+                        </option>
+
+                    </select>
+
+
+
+                 </div>
+
+                 <!-- Pref Access-->
+                  <div class ="mb-3">
+
+                    <label for= "accessMethod">Access Method</label>
+
+                    <select id =" accessMethod"
+                            class ="form-select"
+                            ng-model ="preferences.accessMethod" required>
+
+                        <option value="">Choose an option</option>
+
+                        <option value="Online">Online</option>
+
+                        <option value="In Person">In Person</option>
+                    </select>
+
+
+                  </div>
+
+                  <!--Additonal-->
+                  <div class ="mb-3">
+                     <label for = "additionalNotes">Additional Notes</label>
+
+                    <textarea id= "additionalNotes"
+                    class= "form-control"
+                    ng-model="preferences.notes"></textarea>
+
+                  </div>
+
+
+                  <!-- Confirmation part-->
+                   <button type ="submit" class = "btn btn-primary">
+                    Confirm Preferences
+                    </button> 
+
+
+
+
+            </form>
+
+            <!-- Mahmoud display validation messages-->
+
+            <p id ="preferencesMessage">{{message}}</p>
+          </section>
+
+
+
+     </main>
+
+     <!-- AngularJS app -Husain-->
+      <script src ="js/appPreferences.js"> </script>
 
 
 
 
 </body>
+</html>
