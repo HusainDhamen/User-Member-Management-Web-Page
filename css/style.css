@@ -645,3 +645,117 @@ searchButton {
     color: #75685f;
 }
 
+/* PREFERENCE PAGE */
+
+/* Preferences Header */
+
+#preferencesHeader {
+    background-color: #e7ddd3;
+    border-bottom: 1px solid #cbbcaf;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#preferencesHeader h2 {
+    margin: 0;
+    color: #2f2925;
+}
+
+#preferencesHeader nav {
+    display: flex;
+    gap: 20px;
+}
+
+#preferencesHeader nav a {
+    color: #4a3a30;
+    text-decoration: none;
+}
+
+
+/* Preferences Main Page */
+
+#pageForPreferences {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* Intro */
+
+#preferencesIntro {
+    margin-bottom: 30px;
+}
+
+#preferencesIntro h1 {
+    color: #2f2925;
+    margin-bottom: 10px;
+}
+
+#preferencesIntro p {
+    color: #75685f;
+}
+
+
+/* Preferences Form Box */
+
+#preferencesFormBox {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#preferencesFormBox h2 {
+    color: #2f2925;
+    margin-bottom: 25px;
+}
+
+
+/* Form */
+
+#preferencesForm div {
+    margin-bottom: 15px;
+}
+
+#preferencesForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a3a30;
+}
+
+#preferencesForm input,
+#preferencesForm select,
+#preferencesForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7f3ef;
+    color: #2f2925;
+    border: 1px solid #bfae9f;
+    border-radius: 4px;
+}
+
+#preferencesForm textarea {
+    height: 100px;
+}
+
+
+/* Confirm Button */
+
+#preferencesForm button {
+    background-color: #8b6f5a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+
+/* Message */
+
+#preferencesMessage {
+    margin-top: 15px;
+    color: #75685f;
+}
