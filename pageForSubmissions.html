@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bridgesSubmissionsApp">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bridges - Resource Submissions</title>
+
+    <!-- Ali handle bootstrap and CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AngularJS -Husain -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+
+<body ng-controller="submissionsController">
+
+    <!-- Nav links -->
+    <header id = "submissionsHeader">
+        <h2>Bridges</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="signupPage.html">Join Bridges</a>
+            <a href="pageForPosts.html">Manage Posts</a>
+            <a href="pageForFavorites.html">My Favorites</a>
+            <a href="pageForPreferences.html">Preferences</a>
+            <a href="pageForSubmissions.html">Submit Resource</a>
+            <a href="pageForApprovals.html">Review Submissions</a>
+
+
+        </nav>
+
+
+    </header>
+
+    <main id ="pageForSubmissions" class="container my-4">
+
+        <!-- Intro page -->
+         <section id= "submissionIntro">
+            <h1>Submit a Community Resource</h1>
+            <p>Share a resource with the Bridges community for review.</p>
+
+
+         </section>
+
+         <!-- Submission form-->
+          <section id = "submissionFormBox" class= "my-4">
+
+            <h2>Resource Submission Form</h2>
+
+            <form id = "submissionsForm" ng-submit= "submitResource()" novalidate>
+
+                <!-- name of submitter-->
+                <div class = "mb-3">
+                    <label for ="submittedBy">Your Name</label>
+
+                    <input type= "text" id= "submittedBy"
+                    class= "form-control"
+                    ng-model="submission.submittedBy" required>
+
+
+                </div>
+
+                <!-- title -->
+
+                <div class="mb-3">
+
+                    <label for = "resourceTitle">Resource Title</label>
+
+                    <input type = "text" id="resourceTitle"
+                    class= "form-control"
+                    ng-model="submission.title" required>
+
+                </div>
+
+
+                <!-- Resource category -->
+                <div class = "mb-3">
+
+                    <label for= "resourceCategory">Category</label>
+                    <select id = "resourceCategory"
+                    class= "form-select"
+                    ng-model= "submission.category" required>
+
+                        <option value="">Choose a category</option>
+                        <option value="Community">Community</option>
+                        <option value="Study">Study</option>
+                        <option value="Career">Career</option>
+                        <option value="Events">Events</option>
+
+
+                    </select>
+
+                </div>
+
+                <!-- Resource description -->
+
+                <div class = "mb-3">
+
+                    <label for = "resourceDescription">Description</label>
+
+                    <textarea id = "resourceDescription"
+                    class ="form-control"
+                    rows ="4"
+                    ng-model ="submission.description" required>
+                    </textarea>
+
+                </div>
+
+                <!-- Submit button -->
+
+                <button type = "submit" class="btn btn-primary">
+                    Submit Resource
+
+                </button>
+
+            </form>
+
+            <!-- Mahmoud JS and validation errors-->
+
+            <p id ="submissionsErrors"></p>
+
+            <!-- Gianny ajax response message-->
+            <p id="submissionAjaxMessage"></p>
+
+            <!-- AngularJS confirmation message -Husain -->
+            <p id = "submissionMessage">{{message}}</p>
+
+
+
+
+
+          </section>
+         
+
+
+
+
+    </main>
+
+    <!-- Gianny jQuery library -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Mahmoud and Gianny JS jQuery ajax -->
+    <script src="js/submissions.js"></script>
+
+
+    <!-- AngularJS application -->
+
+    <script src="js/appSubmissions.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
