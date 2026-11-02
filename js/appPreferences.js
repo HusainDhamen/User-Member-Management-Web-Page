@@ -15,6 +15,9 @@ var app = angular.module('bridgesApp', []);
      $scope.submitPreferences = function() { //Function runs when form submitted
 
         $scope.message = "";
+        document.getElementById("jsonOutput").textContent = "";
+        document.getElementById("ajaxMessage").textContent = "";    
+        
 
         if (validatePreferences()) {
 
