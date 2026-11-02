@@ -53,10 +53,10 @@
 
             <h2>Confirm Your Preferences</h2>
 
-            <form id ="preferencesForm" ng-submit ="submitPreferences()">
+            <form id ="preferencesForm" ng-submit ="submitPreferences()" novalidate>
 
                 <!-- Student info-->
-                 <div class="md-3">
+                 <div class="mb-3">
                     <label for="studentName">Full Name</label>
 
                     <input type ="text" id ="studentName" 
@@ -112,7 +112,7 @@
 
                     <label for= "accessMethod">Access Method</label>
 
-                    <select id =" accessMethod"
+                    <select id ="accessMethod"
                             class ="form-select"
                             ng-model ="preferences.accessMethod" required>
 
@@ -148,6 +148,12 @@
             </form>
 
             <!-- Mahmoud display validation messages-->
+            
+            <p id="preferenceErrors"></p>
+
+            <!-- Gianny JSON output and AJAX message -->
+            <pre id="jsonOutput"></pre>
+            <p id="ajaxMessage"></p>
 
             <p id ="preferencesMessage">{{message}}</p>
           </section>
@@ -164,7 +170,10 @@
     <script src="js/preferences.js"></script>
 
      <!-- AngularJS app -Husain-->
-      <script src ="js/appPreferences.js"> </script>
+    <script src ="js/appPreferences.js"> </script>
+
+
+    
 
 
 

@@ -1,4 +1,4 @@
-// Husain-file
+
 
 var app = angular.module('bridgesApp', []);
 
@@ -14,13 +14,22 @@ var app = angular.module('bridgesApp', []);
      
      $scope.submitPreferences = function() { //Function runs when form submitted
 
-   
-         var preferencesJSON = JSON.stringify($scope.preferences);
+        $scope.message = "";
+
+        if (validatePreferences()) {
+
+             var preferencesJSON = JSON.stringify($scope.preferences);
 
         
-         $scope.message = "Your preferences have been confirmed!";
+            $scope.message = "Your preferences have been confirmed!";
 
-         console.log("Preferences:", preferencesJSON); //Displays the json
+            sendPreferences();
+
+            console.log("Preferences:", preferencesJSON); //Displays the json
+
+        }
+
+        
      };
 
 });
