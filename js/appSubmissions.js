@@ -18,7 +18,7 @@ app.controller("submissionsController", function($scope) {
             var submissionJSON = JSON.stringify($scope.submission);
 
 
-            // Send the information using Gianny's AJAX function
+            // Send the information using gianny's AJAX function
             sendSubmission();
 
 
@@ -40,5 +40,5 @@ app.controller("submissionsController", function($scope) {
 
 
 
-    
+
 });
