@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="bridgesApprovalsApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+
+    <title>Bridges - Resource Approvals</title>
+
+
+    <!-- Ali use bootstrap and CSS-->
+
+    <link href ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel= "stylesheet" href ="css/style.css">
+
+    <!-- AngularJS library -->
+     <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+
+</head>
+
+<body ng-controller ="approvalsController">
+
+    <!-- Navigation -->
+     <header id = "approvalsHeader">
+        <h2>Bridges</h2>
+
+        <nav>
+            <a href = "index.html">Home</a>
+            <a href="signupPage.html">Join Bridges</a>
+            <a href="pageForPosts.html">Manage Posts</a>
+            <a href="pageForFavorites.html">My Favorites</a>
+            <a href="pageForPreferences.html">Preferences</a>
+            <a href="pageForSubmissions.html">Submit Resource</a>
+            <a href="pageForApprovals.html">Review Submissions</a>
+
+        </nav>
+
+
+     </header>
+
+     <main id = "pageForApprovals" class= "container my-4">
+
+        <!-- Intro page -->
+         <section id="approvalsIntro">
+            <h1>Review Community Submissions</h1>
+            <p>Review submitted resources before they appear in the community.</p>
+
+
+         </section>
+
+         <!-- Pendings subs list-->
+          <section id ="approvalsListBox" class = "my-4">
+
+            <h2>Pending Resources</h2>
+
+            <!-- Gianny AJAX loading message-->
+            <p id = "approvalsAjaxMessage"></p>
+
+            <!-- AngularJS displays pending subs -Husain-->
+             <div id ="pendingResources">
+
+                <div class ="card mb-3" 
+                ng-repeat= "resource in submissions | filter: {status: 'pending'}">
+
+                <div class ="card-body">
+
+                    <h3 class = "card-title">{{resource.title}}</h3>
+
+
+                    <p><strong>Submitted By:</strong> {{resource.submittedBy}}</p>
+                    <p><strong>Category:</strong> {{resource.category}}</p>
+                    <p><strong>Description:</strong> {{resource.description}}</p>
+                    <p><strong>Status:</strong> {{resource.status}}</p>
+
+
+                    <!-- Approval buttons -husain-->
+
+                    <button type ="button" class = "btn btn-success" 
+                    ng-click ="reviewResource(resource, 'approved')">Approve</button>
+
+                    <button type = "button" class ="btn btn-danger" 
+                    ng-click ="reviewResource(resource, 'rejected')">Reject</button>
+
+                </div>
+
+
+                </div>
+
+             <!-- Display message when no pending subs-->
+
+             <p ng-if = "(submissions | filter:{status: 'pending'}).length === 0">
+                No pending resources to review.
+             </p>
+
+             </div>
+
+             <!-- AngularJS confim message-->
+              <p id = "approvalsMessage">{{message}}</p>
+
+
+
+
+          </section>
+
+
+     </main>
+
+
+    <!-- Gianny jQuery library -->
+    <script src = "https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Mahmoud and Gianny  JS and AJAX -->
+    <script src ="js/approvals.js"></script>
+
+    <!-- AngularJS application -Husain -->
+    <script src = "js/appApprovals.js"></script>
+
+
+
+
+
+</body>
+</html>
