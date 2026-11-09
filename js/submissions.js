@@ -82,3 +82,4 @@ function sendSubmission(submission, $scope) {
         $scope.messageType = "danger";
       });
     });
+}
