@@ -52,3 +52,33 @@ function validateSubmission() {
 // Send the JSON data to the Node.js backend using AJAX
 
 // Handle success and error responses
+function sendSubmission(submission, $scope) {
+  // Run Mahmoud's validation first (if his function is loaded)
+  if (typeof validateSubmission === "function") {
+    if (!validateSubmission(submission, $scope)) {
+      return; // validation shows its own error messages
+    }
+  }
+ 
+  $.ajax({
+    url: "/api/submissions",
+    method: "POST",
+    contentType: "application/json",
+    data: JSON.stringify(submission),
+    dataType: "json"
+  })
+    .done(function () {
+      $scope.$applyAsync(function () {
+        $scope.message = "Thank you! Your resource was submitted and is waiting for approval.";
+        $scope.messageType = "success";
+        $scope.submission = {}; // clear the form
+      });
+    })
+    .fail(function (xhr) {
+      var reason = (xhr.responseJSON && (xhr.responseJSON.error || xhr.responseJSON.message)) ||
+        "Something went wrong submitting your resource. Please try again.";
+      $scope.$applyAsync(function () {
+        $scope.message = reason;
+        $scope.messageType = "danger";
+      });
+    });
