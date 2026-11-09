@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Food Pantry Assistance",
+    "category": "Food",
+    "description": "Provides free groceries to community members in need.",
+    "submittedBy": "Sarah Johnson",
+    "status": "pending"
+  },
+  {
+    "id": 2,
+    "title": "Free Tutoring Program",
+    "category": "Education",
+    "description": "Offers after-school tutoring for K-12 students.",
+    "submittedBy": "Michael Lee",
+    "status": "approved"
+  },
+  {
+    "id": 3,
+    "title": "Community Health Clinic",
+    "category": "Healthcare",
+    "description": "Provides basic health screenings and consultations.",
+    "submittedBy": "Emily Davis",
+    "status": "rejected"
+  },
+  {
+    "id": 4,
+    "title": "Job Readiness Workshop",
+    "category": "Employment",
+    "description": "Helps participants build resumes and prepare for interviews.",
+    "submittedBy": "David Martinez",
+    "status": "pending"
+  },
+  {
+    "id": 5,
+    "title": "Emergency Housing Support",
+    "category": "Housing",
+    "description": "Connects individuals with temporary housing resources.",
+    "submittedBy": "Jessica Rivera",
+    "status": "approved"
+  }
+]
