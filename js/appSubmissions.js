@@ -13,18 +13,17 @@ app.controller("submissionsController", function($scope) {
 
         $scope.message = "";
 
-        if (validateSubmission()) {
+        if (validateSubmission($scope.submission, $scope)) {
 
             var submissionJSON = JSON.stringify($scope.submission);
 
 
             // Send the information using gianny's AJAX function
-            sendSubmission();
+            sendSubmission($scope.submission, $scope);
 
 
 
-            
-            $scope.message = "Your resource has been submitted for review!";
+        
 
             
             console.log("Submission:", submissionJSON);

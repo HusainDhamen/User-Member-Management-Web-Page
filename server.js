@@ -46,6 +46,11 @@ app.get("/api/submissions", function (req, res) {
 // Create PUT endpoint to approve or reject submissions
 app.put("/api/submissions/:id", function (req, res) {
     let id = Number(req.params.id);
+    if (req.body.status !== "approved" && req.body.status !== "rejected") 
+    {
+        res.status(400).json({ message: "Invalid submission status." });
+        return;
+    }
 
     for (let i = 0; i < submissions.length; i++) {
         if (submissions[i].id === id) {

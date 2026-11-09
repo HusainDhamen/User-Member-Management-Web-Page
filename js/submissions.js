@@ -53,13 +53,7 @@ function validateSubmission() {
 
 // Handle success and error responses
 function sendSubmission(submission, $scope) {
-  // Run Mahmoud's validation first (if his function is loaded)
-  if (typeof validateSubmission === "function") {
-    if (!validateSubmission(submission, $scope)) {
-      return; // validation shows its own error messages
-    }
-  }
- 
+  
   $.ajax({
     url: "/api/submissions",
     method: "POST",
