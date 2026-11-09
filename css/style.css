@@ -759,3 +759,253 @@ searchButton {
     margin-top: 15px;
     color: #75685f;
 }
+
+
+
+/* Submissions Header */
+
+#submissionsHeader {
+    background-color: #e7ddd3;
+    border-bottom: 1px solid #cbbcaf;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submissionsHeader h2 {
+    margin: 0;
+    color: #2f2925;
+}
+
+#submissionsHeader nav {
+    display: flex;
+    gap: 20px;
+}
+
+#submissionsHeader nav a {
+    color: #4a3a30;
+    text-decoration: none;
+}
+
+
+/* Main Submissions Page */
+
+#pageForSubmissions {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* Introduction */
+
+#submissionIntro {
+    margin-bottom: 30px;
+}
+
+#submissionIntro h1 {
+    color: #2f2925;
+    margin-bottom: 10px;
+}
+
+#submissionIntro p {
+    color: #75685f;
+}
+
+
+/* Submission Form Box */
+
+#submissionFormBox {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#submissionFormBox h2 {
+    color: #2f2925;
+    margin-bottom: 25px;
+}
+
+
+/* Submission Form */
+
+#submissionsForm div {
+    margin-bottom: 15px;
+}
+
+#submissionsForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #4a3a30;
+}
+
+#submissionsForm input,
+#submissionsForm select,
+#submissionsForm textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f7f3ef;
+    color: #2f2925;
+    border: 1px solid #bfae9f;
+    border-radius: 4px;
+}
+
+#submissionsForm textarea {
+    height: 100px;
+}
+
+
+/* Submit Button */
+
+#submissionsForm button {
+    background-color: #8b6f5a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+
+/* Form Messages */
+
+#submissionsErrors {
+    margin-top: 15px;
+    color: #b91c1c;
+}
+
+#submissionAjaxMessage {
+    margin-top: 15px;
+    color: #75685f;
+}
+
+#submissionMessage {
+    margin-top: 15px;
+    color: #75685f;
+}
+
+/* Approvals Header */
+
+#approvalsHeader {
+    background-color: #e7ddd3;
+    border-bottom: 1px solid #cbbcaf;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#approvalsHeader h2 {
+    margin: 0;
+    color: #2f2925;
+}
+
+#approvalsHeader nav {
+    display: flex;
+    gap: 20px;
+}
+
+#approvalsHeader nav a {
+    color: #4a3a30;
+    text-decoration: none;
+}
+
+
+/* Main Approvals Page */
+
+#pageForApprovals {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+/* Introduction */
+
+#approvalsIntro {
+    margin-bottom: 30px;
+}
+
+#approvalsIntro h1 {
+    color: #2f2925;
+    margin-bottom: 10px;
+}
+
+#approvalsIntro p {
+    color: #75685f;
+}
+
+
+/* Pending Resources Box */
+
+#approvalsListBox {
+    background-color: #eee6de;
+    border: 1px solid #cbbcaf;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+#approvalsListBox h2 {
+    color: #2f2925;
+    margin-bottom: 25px;
+}
+
+
+/* Resource Cards */
+
+#pendingResources .card {
+    background-color: #f7f3ef;
+    border: 1px solid #cbbcaf;
+    border-radius: 5px;
+}
+
+#pendingResources .card-body {
+    padding: 20px;
+}
+
+#pendingResources h3 {
+    color: #2f2925;
+    margin-bottom: 15px;
+}
+
+#pendingResources p {
+    color: #75685f;
+    margin-bottom: 10px;
+}
+
+
+/* Approve Button */
+
+#pendingResources .btn-success {
+    background-color: #6b8067;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+/* Reject Button */
+
+#pendingResources .btn-danger {
+    background-color: #a65d57;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+}
+
+
+/* Messages */
+
+#approvalsAjaxMessage {
+    color: #75685f;
+    margin-top: 15px;
+}
+
+#approvalsMessage {
+    color: #75685f;
+    margin-top: 15px;
+}
