@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS bridges_db;
+
+USE bridges_db;
+
+
+CREATE TABLE IF NOT EXISTS members 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE IF NOT EXISTS submissions 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    submittedBy VARCHAR(100) NOT NULL,
+    title VARCHAR(150) NOT NULL,
+    category VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'pending'
+);
