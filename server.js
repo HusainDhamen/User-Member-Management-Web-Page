@@ -1,75 +1,222 @@
-
 // Mahmoud - Node.js Backend
+// Gianny - AJAX API Integration
 
-// Import Express and other required modules
 const express = require("express");
-const fs = require("fs");
 
-// Create the Express application
+const db = require("./db");
+
 const app = express();
 
-// Enable JSON request handling
+
+
 app.use(express.json());
 
-// Serve the website files
+
 app.use(express.static(__dirname));
 
-// Load or initialize submission data
-let submissions = [];
 
-if (fs.existsSync("data/submissions.json")) {
-    submissions = JSON.parse(fs.readFileSync("data/submissions.json"));
-}
+app.get("/api/submissions", async function (req, res) {
+    try {
+        const [submissions] = await db.query(
+            "SELECT * FROM submissions"
+        );
 
-// Create POST endpoint to receive new submissions
-app.post("/api/submissions", function (req, res) {
-    let newSubmission = {
-        id: submissions.length + 1,
-        submittedBy: req.body.submittedBy,
-        title: req.body.title,
-        category: req.body.category,
-        description: req.body.description,
-        status: "pending"
-    };
-
-    submissions.push(newSubmission);
-    saveSubmissions();
-
-    res.json(newSubmission);
-});
-
-// Create GET endpoint to retrieve submissions
-app.get("/api/submissions", function (req, res) {
-    res.json(submissions);
-});
-
-// Create PUT endpoint to approve or reject submissions
-app.put("/api/submissions/:id", function (req, res) {
-    let id = Number(req.params.id);
-    if (req.body.status !== "approved" && req.body.status !== "rejected") 
-    {
-        res.status(400).json({ message: "Invalid submission status." });
-        return;
+        res.json(submissions);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
     }
+});
 
-    for (let i = 0; i < submissions.length; i++) {
-        if (submissions[i].id === id) {
-            submissions[i].status = req.body.status;
-            saveSubmissions();
-            res.json(submissions[i]);
-            return;
+
+app.post("/api/submissions", async function (req, res) {
+    try {
+        const { submittedBy, title, category, description } = req.body;
+
+        if (!submittedBy || !title || !category || !description) {
+            return res.status(400).json({
+                message: "All fields are required."
+            });
         }
-    }
 
-    res.status(404).json({ message: "Submission not found." });
+        const [result] = await db.query(
+            "INSERT INTO submissions (submittedBy, title, category, description, status) VALUES (?, ?, ?, ?, ?)",
+            [submittedBy, title, category, description, "pending"]
+        );
+
+        res.status(201).json({
+            id: result.insertId,
+            submittedBy: submittedBy,
+            title: title,
+            category: category,
+            description: description,
+            status: "pending"
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
 });
 
-// Save updated submission data
-function saveSubmissions() {
-    fs.writeFileSync("data/submissions.json", JSON.stringify(submissions, null, 2));
+
+app.put("/api/submissions/:id", async function (req, res) {
+    try {
+        const id = req.params.id;
+        const status = req.body.status;
+
+        if (status !== "approved" && status !== "rejected") {
+            return res.status(400).json({
+                message: "Invalid submission status."
+            });
+        }
+
+        const [result] = await db.query(
+            "UPDATE submissions SET status = ? WHERE id = ?",
+            [status, id]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Submission not found."
+            });
+        }
+
+        const [rows] = await db.query(
+            "SELECT * FROM submissions WHERE id = ?",
+            [id]
+        );
+
+        res.json(rows[0]);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+app.delete("/api/submissions/:id", async function (req, res) {
+    try {
+        const [result] = await db.query(
+            "DELETE FROM submissions WHERE id = ?",
+            [req.params.id]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Submission not found."
+            });
+        }
+
+        res.json({ message: "Submission deleted." });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+app.get("/api/members", async function (req, res) {
+    try {
+        const [members] = await db.query(
+            "SELECT * FROM members"
+        );
+
+        res.json(members);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+app.post("/api/members", async function (req, res) {
+    try {
+        const { full_name, email } = req.body;
+
+        if (!full_name || !email) {
+            return res.status(400).json({
+                message: "Name and email are required."
+            });
+        }
+
+        const [result] = await db.query(
+            "INSERT INTO members (full_name, email) VALUES (?, ?)",
+            [full_name, email]
+        );
+
+        res.status(201).json({
+            id: result.insertId,
+            full_name: full_name,
+            email: email
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+app.put("/api/members/:id", async function (req, res) {
+    try {
+        const { full_name, email } = req.body;
+
+        if (!full_name || !email) {
+            return res.status(400).json({
+                message: "Name and email are required."
+            });
+        }
+
+        const [result] = await db.query(
+            "UPDATE members SET full_name = ?, email = ? WHERE id = ?",
+            [full_name, email, req.params.id]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Member not found."
+            });
+        }
+
+        const [rows] = await db.query(
+            "SELECT * FROM members WHERE id = ?",
+            [req.params.id]
+        );
+
+        res.json(rows[0]);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+app.delete("/api/members/:id", async function (req, res) {
+    try {
+        const [result] = await db.query(
+            "DELETE FROM members WHERE id = ?",
+            [req.params.id]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Member not found."
+            });
+        }
+
+        res.json({ message: "Member deleted." });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
+
+async function startServer() {
+    try {
+        const connection = await db.getConnection();
+
+        console.log("Connected to Bridges MySQL database!");
+        connection.release();
+
+        app.listen(3000, function () {
+            console.log("Server running at http://localhost:3000");
+        });
+    } catch (error) {
+        console.log("Database connection failed:", error.message);
+        process.exitCode = 1;
+        await db.end();
+    }
 }
 
-// Start the Node.js server
-app.listen(3000, function () {
-    console.log("Server running at http://localhost:3000");
-});
+startServer();
